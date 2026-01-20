@@ -132,7 +132,7 @@ io.on("connection",(socket)=>{
 
 
 app.use(cors({ 
-    origin: "http://localhost:5173", // your frontend URL
+    origin: ["http://localhost:5173", "https://anonymous-yuvidu-frontend.netlify.app"], // your frontend URLs
     credentials: true}
 ));
 
