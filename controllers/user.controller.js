@@ -37,9 +37,11 @@ export const login = async (req , res) => {
         const cook = res.cookie('userdata',JSON.stringify({nickname:userexistence.nickname, codename:userexistence.codename, id:userexistence._id}),{secure: false, sameSite: 'Strict', maxAge: 48 * 60 * 60 * 1000 })
         console.log("Cookie set:", cook.userdata);
         res.status(200).json({message:"login successfull",
-            user:{ nickname: userexistence.nickname,
-            codename: userexistence.codename,
-            firstname: userexistence.firstname}
+            user:{ 
+                id: userexistence._id,
+                nickname: userexistence.nickname,
+                codename: userexistence.codename,
+                firstname: userexistence.firstname}
         })
     } catch (error) {
         res.status(500).json({message:"internal server error"})
