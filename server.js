@@ -19,7 +19,7 @@ const server = http.createServer(app);
 
 const io = new Server(server,{
     cors:{
-        origin: ["http://localhost:5173","https://anonymous-yuvidu-frontend.netlify.app"], // your frontend URL
+        origin: ["http://localhost:5173","https://anonymous-yuvidu-frontend.netlify.app","https://sex-cat-yuvidu.netlify.app"], // your frontend URL
         methods: ["GET","POST"],
         credentials: true
     }
@@ -132,7 +132,7 @@ io.on("connection",(socket)=>{
 
 
 app.use(cors({ 
-    origin: ["http://localhost:5173", "https://anonymous-yuvidu-frontend.netlify.app"], // your frontend URLs
+    origin: ["http://localhost:5173", "https://anonymous-yuvidu-frontend.netlify.app","https://sex-cat-yuvidu.netlify.app"], // your frontend URLs
     credentials: true}
 ));
 
